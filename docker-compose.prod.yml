@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  prod-app:
+    container_name: production
+    image: production
+    build: 
+      context: .
+      dockerfile: Dockerfile
+      target: prod
+    ports:
+      - 80:80
+    # ports:
+    #   - 4200:80

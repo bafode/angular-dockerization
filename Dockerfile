@@ -37,3 +37,9 @@ RUN npm install -g @angular/cli
 COPY . .
 
 CMD ng build
+
+FROM nginx as prod
+
+COPY --from=build /app/dist/angular-dockerization/ /usr/share/nginx/html
+
+CMD nginx-debug -g "daemon off;"
