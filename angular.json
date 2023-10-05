@@ -63,7 +63,8 @@
               "browserTarget": "angular-dockerization:build:production"
             },
             "development": {
-              "browserTarget": "angular-dockerization:build:development"
+              "browserTarget": "angular-dockerization:build:development",
+              "host": "0.0.0.0"
             }
           },
           "defaultConfiguration": "development"
